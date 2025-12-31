@@ -39,7 +39,7 @@ export class WeddingInviteComponent implements AfterViewInit, OnDestroy {
   events = [
     {
       title: 'Ceremonia Religiosa',
-      time: '14:00 hrs',
+      time: '16:00 hrs',
       dateText: '14 de febrero 2026',
       place: 'Parroquia de San Cristobal Mártir',
       address: 'Pl. de La Constitución 8, La Cabecera, 54660 Coyotepec, Méx',
@@ -51,7 +51,7 @@ export class WeddingInviteComponent implements AfterViewInit, OnDestroy {
       dateText: '14 de febrero 2026',
       place: 'Casa de la familia López Luna',
       address: 'Calle Francisco Márquez s/n, barrio San Juan, Coyotepec',
-      mapsUrl: 'https://maps.google.com/?q=Calle%20Francisco%20M%C3%A1rquez%20Coyotepec'
+      mapsUrl: 'https://maps.app.goo.gl/CpxtoGxMWazCR6bN6'
     },
     {
       title: 'Recepción y Fiesta',

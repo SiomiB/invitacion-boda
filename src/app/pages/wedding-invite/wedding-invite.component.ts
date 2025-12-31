@@ -33,7 +33,7 @@ export class WeddingInviteComponent implements AfterViewInit, OnDestroy {
   ];
 
   parentsGroom = [
-    'Alejandra Herrera Garcí'
+    'Alejandra Herrera García'
   ];
 
   events = [

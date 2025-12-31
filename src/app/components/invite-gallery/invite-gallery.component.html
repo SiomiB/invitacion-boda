@@ -1,0 +1,56 @@
+<section class="gallerySection" #reveal>
+  <div class="galleryHeader">
+    <div class="ornament" aria-hidden="true">
+      <svg class="ornament__icon" viewBox="0 0 64 64">
+        <path d="M32 12l2.2 6.8L41 21l-6.8 2.4L32 30l-2.2-6.6L23 21l6.8-2.2L32 12z"
+              fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" opacity=".95"/>
+        <path d="M48 28l1.2 3.4L52 32.4l-2.8 1L48 36l-1.2-2.6L44 32.4l2.8-.9L48 28z"
+              fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" opacity=".55"/>
+      </svg>
+      <div class="ornament__rule"></div>
+    </div>
+
+    <h2 class="title script">Momentos</h2>
+    <p class="subtitle">Un pedacito de nuestra historia</p>
+  </div>
+
+  <div class="masonry" role="list">
+    <button
+      class="shot shot--hero"
+      type="button"
+      (click)="open(0)"
+      aria-label="Abrir foto 1">
+      <img [src]="photos[0]" alt="Foto de los novios" loading="lazy" />
+    </button>
+
+    <button
+      class="shot"
+      type="button"
+      *ngFor="let src of photos.slice(1); let i = index"
+      (click)="open(i + 1)"
+      [attr.aria-label]="'Abrir foto ' + (i + 2)">
+      <img [src]="src" alt="Foto de los novios" loading="lazy" />
+    </button>
+  </div>
+
+  <div class="rule" aria-hidden="true"></div>
+</section>
+
+<div class="lightbox" *ngIf="isOpen" (click)="close()" aria-modal="true" role="dialog">
+  <div
+    class="lightbox__panel"
+    (click)="$event.stopPropagation()"
+    (touchstart)="onTouchStart($event)"
+    (touchend)="onTouchEnd($event)">
+
+    <button class="lightbox__close" type="button" (click)="close()" aria-label="Cerrar">✕</button>
+
+    <img class="lightbox__img" [class.fade]="imgFade" [src]="currentSrc" alt="Foto ampliada" />
+
+    <div class="lightbox__nav">
+      <button class="navBtn" type="button" (click)="prev()" aria-label="Anterior">←</button>
+      <div class="counter">{{ index + 1 }} / {{ photos.length }}</div>
+      <button class="navBtn" type="button" (click)="next()" aria-label="Siguiente">→</button>
+    </div>
+  </div>
+</div>

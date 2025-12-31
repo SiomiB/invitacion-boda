@@ -1,0 +1,117 @@
+.feature{
+  text-align: center;
+  margin: 54px auto;
+  max-width: 980px;
+  padding: 0 16px;
+
+  opacity: 0;
+  transform: translateY(8px);
+  filter: blur(3px);
+  transition: opacity 1s ease, transform 1s ease, filter 1s ease;
+}
+
+.feature.is-visible{
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+.feature__header{
+  max-width: 860px;
+  margin: 0 auto 18px;
+  display: grid;
+  gap: 8px;
+}
+
+.title{
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 2.7rem);
+  line-height: 1.02;
+  color: rgba(255,255,255,.96);
+}
+
+.subtitle{
+  margin: 0;
+  color: rgba(255,255,255,.78);
+  letter-spacing: .10em;
+  text-transform: uppercase;
+  font-size: .78rem;
+}
+
+
+.ornament{
+  display:grid;
+  place-items:center;
+  gap: 10px;
+  margin-bottom: 10px;
+  color: rgba(230,220,207,.95);
+}
+.ornament__icon{
+  width: 26px;
+  height: 26px;
+  display:block;
+  filter: drop-shadow(0 10px 22px rgba(0,0,0,.18));
+  animation: softGlow 2.8s ease-in-out infinite;
+}
+.ornament__rule{
+  width: 140px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(230,220,207,.55), transparent);
+  opacity: .9;
+}
+
+.grid{
+  display: grid;
+  gap: 12px;
+  justify-items: center; 
+
+  @media (min-width: 860px){
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    align-items: stretch;
+
+    justify-items: stretch; 
+  }
+}
+
+.frame{
+  margin: 0;
+  border-radius: 24px;
+  overflow: hidden;
+
+  max-width: 520px; 
+  width: 100%;
+
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.14);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 26px 80px rgba(0,0,0,.18);
+}
+
+.frame img{
+  width: 100%;
+  height: auto;
+  display:block;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  transform: scale(1.02);
+  transition: transform .9s ease, filter .9s ease;
+  filter: saturate(1.03) contrast(1.02);
+}
+
+.frame:hover img{
+  transform: scale(1.06);
+}
+
+.rule{
+  margin: 22px auto 0;
+  max-width: 860px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.22), rgba(230,220,207,.45), rgba(255,255,255,.22), transparent);
+}
+
+@keyframes softGlow {
+  0%, 100% { opacity: .85; transform: translateY(0) scale(1); }
+  50%      { opacity: 1;   transform: translateY(-1px) scale(1.02); }
+}

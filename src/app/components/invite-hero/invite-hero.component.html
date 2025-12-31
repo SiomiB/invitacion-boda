@@ -1,0 +1,72 @@
+<section class="hero" id="top">
+  <audio #audio preload="auto" loop>
+    <source [src]="musicSrc" type="audio/mpeg" />
+  </audio>
+
+  <div class="bg"></div>
+  <div class="sparkles" aria-hidden="true"></div>
+
+  <div class="content">
+
+  <div class="fairytale-mark" aria-hidden="true">
+    <svg class="fairytale-mark__icon" viewBox="0 0 64 64">
+      <path d="M26 20c-2-3-1-6 2-8 2-1 4-1 6 0 2-2 4-3 6-3 2 0 3 1 4 2-3 1-5 3-6 6"
+            fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/>
+      <path d="M18 28c-4 2-6 6-6 11 0 9 8 16 20 16s20-7 20-16c0-5-2-9-6-11"
+            fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/>
+      <path d="M20 30c3-3 8-5 12-5s9 2 12 5"
+            fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/>
+      <path d="M16 42h32"
+            fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/>
+      <circle cx="22" cy="54" r="3" fill="none" stroke="currentColor" stroke-width="2.8"/>
+      <circle cx="42" cy="54" r="3" fill="none" stroke="currentColor" stroke-width="2.8"/>
+    </svg>
+
+    <div class="fairytale-mark__rule"></div>
+  </div>
+
+    <p class="kicker">14 · Febrero · 2026</p>
+
+    <h1 class="title script">
+      {{ bride }} <span>&</span> {{ groom }}
+    </h1>
+
+    <div class="countdown" aria-label="Cuenta regresiva">
+      <div class="cd">
+        <div class="n">{{ cd.d }}</div>
+        <div class="l">Días</div>
+      </div>
+      <div class="cd">
+        <div class="n">{{ cd.h }}</div>
+        <div class="l">Horas</div>
+      </div>
+      <div class="cd">
+        <div class="n">{{ cd.m }}</div>
+        <div class="l">Min</div>
+      </div>
+      <div class="cd">
+        <div class="n">{{ cd.s }}</div>
+        <div class="l">Seg</div>
+      </div>
+    </div>
+
+    <p class="subtitle script">
+      “Un cuento empieza cuando dos personas deciden caminar juntas…”
+    </p>
+
+    <div class="actions">
+      <button class="storyBtn" type="button" (click)="openInvitation()">
+        <span class="storyBtn__top">Érase una vez…</span>
+        <span class="storyBtn__main">Abrir invitación</span>
+        <span class="storyBtn__sub">Toca para comenzar el cuento ✨</span>
+      </button>
+
+      <button class="musicPill" type="button" (click)="toggleMusic()" [attr.aria-label]="playing ? 'Pausar música' : 'Reproducir música'">
+        <span class="musicPill__dot" [class.on]="playing"></span>
+        <span class="musicPill__text">{{ playing ? 'Música · On' : 'Música · Off' }}</span>
+      </button>
+    </div>
+
+    <div class="hint">Desliza ↓</div>
+  </div>
+</section>

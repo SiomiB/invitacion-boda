@@ -1,1 +1,92 @@
 /* You can add global styles to this file, and also import other style files */
+*, *::before, *::after { box-sizing: border-box; }
+
+:root{
+  --blue-night:#1f2a44;
+  --blue-deep:#2f3e5c;
+  --blue-soft:#7f8fa6;
+  --cream:#f4efe9;
+  --beige:#e6dccf;
+  --white-soft:#fafafa;
+
+  --font-sans: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --font-script: "Great Vibes", cursive;
+}
+
+
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100svh;
+}
+
+body{ font-family: var(--font-sans); }
+
+.script{
+  font-family: var(--font-script);
+  letter-spacing: .02em;
+}
+
+body{
+  margin: 0;
+  background:
+  radial-gradient(circle at 20% 18%, rgba(255,255,255,.12), transparent 45%),
+  radial-gradient(circle at 80% 25%, rgba(230,220,207,.10), transparent 48%),
+  linear-gradient(160deg,
+    var(--blue-night) 0%,
+    var(--blue-deep) 55%,
+    #465a7b 85%,
+    var(--beige) 100%);
+  background-attachment: fixed;
+  font-family: var(--font-sans);
+}
+
+body::before{
+  content:'';
+  position: fixed;
+  inset: -20%;
+  z-index: 2; 
+  pointer-events: none;
+
+  background:
+    radial-gradient(circle, rgba(255,255,255,.35) 0 1.5px, transparent 2px) 0 0 / 140px 140px,
+    radial-gradient(circle, rgba(255,255,255,.25) 0 1px, transparent 2px) 40px 60px / 180px 180px,
+    radial-gradient(circle, rgba(230,220,207,.35) 0 1.2px, transparent 2px) 80px 120px / 220px 220px;
+
+  opacity: .35;
+  animation: sparkleFloat 22s linear infinite;
+}
+
+body::after{
+  content:'';
+  position: fixed;
+  inset: -20%;
+  z-index: 2;
+  pointer-events: none;
+
+  background:
+    radial-gradient(circle, rgba(255,255,255,.18) 0 1px, transparent 2px) 20px 30px / 200px 200px,
+    radial-gradient(circle, rgba(255,255,255,.12) 0 1px, transparent 2px) 100px 140px / 260px 260px;
+
+  opacity: .25;
+  animation: sparkleFloatReverse 36s linear infinite;
+}
+
+@keyframes sparkleFloat{
+  from { transform: translateY(0) translateX(0); }
+  to   { transform: translateY(-120px) translateX(60px); }
+}
+
+@keyframes sparkleFloatReverse{
+  from { transform: translateY(0) translateX(0); }
+  to   { transform: translateY(140px) translateX(-80px); }
+}
+
+.hero,
+.wrap{
+  position: relative;
+  z-index: 3;
+}

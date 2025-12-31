@@ -1,0 +1,48 @@
+<section class="rsvp" id="rsvp" #reveal>
+  <header class="rsvp__header">
+    <div class="ornament" aria-hidden="true">
+      <svg class="ornament__icon" viewBox="0 0 64 64">
+        <path d="M32 12l2.2 6.8L41 21l-6.8 2.4L32 30l-2.2-6.6L23 21l6.8-2.2L32 12z"
+              fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" opacity=".95"/>
+        <path d="M48 28l1.2 3.4L52 32.4l-2.8 1L48 36l-1.2-2.6L44 32.4l2.8-.9L48 28z"
+              fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" opacity=".55"/>
+      </svg>
+      <div class="ornament__rule"></div>
+    </div>
+
+    <h2 class="rsvp__title script">Confirmar asistencia</h2>
+    <p class="rsvp__subtitle">Tu respuesta nos ayuda a organizarlo todo</p>
+  </header>
+
+  <div class="form">
+    <label class="field">
+      <span class="label">Tu nombre</span>
+      <input class="control" type="text" [(ngModel)]="name" placeholder="Ej. Alan Herrera" />
+    </label>
+
+    <div class="field">
+      <span class="label">¿Asistirás?</span>
+      <div class="segmented" role="group" aria-label="Confirmación">
+        <button type="button" class="seg" [class.active]="rsvp==='yes'" (click)="rsvp='yes'">Asistiré</button>
+        <button type="button" class="seg" [class.active]="rsvp==='no'" (click)="rsvp='no'; guests=1">No asistiré</button>
+      </div>
+    </div>
+
+    <label class="field" *ngIf="rsvp !== 'no'">
+      <span class="label">Número de invitados</span>
+      <input class="control" type="number" min="1" max="10" [(ngModel)]="guests" />
+    </label>
+
+    <label class="field">
+      <span class="label">Mensaje (opcional)</span>
+      <textarea class="control" rows="3" [(ngModel)]="message" placeholder="¿Alguna nota?"></textarea>
+    </label>
+
+    <button class="btn" [disabled]="disabled" (click)="send()">
+      {{ rsvp === 'no' ? 'Enviar respuesta' : 'Confirmar por WhatsApp' }}
+      <span class="arrow">→</span>
+    </button>
+
+    <div class="rsvp__rule" aria-hidden="true"></div>
+  </div>
+</section>

@@ -1,0 +1,24 @@
+<footer class="footer" #reveal>
+  <div class="footer__ornament" aria-hidden="true">
+    <svg class="footer__icon" viewBox="0 0 64 64">
+      <path d="M32 12l2.2 6.8L41 21l-6.8 2.4L32 30l-2.2-6.6L23 21l6.8-2.2L32 12z"
+            fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" opacity=".95"/>
+      <path d="M48 28l1.2 3.4L52 32.4l-2.8 1L48 36l-1.2-2.6L44 32.4l2.8-.9L48 28z"
+            fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" opacity=".55"/>
+    </svg>
+    <div class="footer__rule"></div>
+  </div>
+
+  <p class="thanks">Con cariño,</p>
+  <h3 class="names script">{{ bride }} <span class="amp">&</span> {{ groom }}</h3>
+
+  <p class="quote">
+    “Y así, como en los cuentos, comenzó nuestro para siempre…”
+  </p>
+
+  <button class="back" type="button" (click)="top()">
+    Volver arriba <span class="arrow">↑</span>
+  </button>
+
+  <div class="footer__rule2" aria-hidden="true"></div>
+</footer>

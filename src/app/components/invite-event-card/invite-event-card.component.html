@@ -1,0 +1,61 @@
+<section class="event" #reveal [class.is-cinderella]="variant === 'cinderella'">
+  <header class="event__header">
+    <div class="event__titleWrap">
+
+      <div class="ornament" *ngIf="ornament !== 'none'" aria-hidden="true">
+        
+        <svg *ngIf="ornament === 'stars'" class="ornament__icon" viewBox="0 0 64 64">
+          <path d="M32 10l2.4 7.2L42 20l-7.6 2.8L32 30l-2.4-7.2L22 20l7.6-2.8L32 10z"
+                fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+          <path d="M48 14l1.6 4.6L54 20l-4.4 1.6L48 26l-1.6-4.4L42 20l4.4-1.4L48 14z"
+                fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" opacity=".9"/>
+          <path d="M16 28l1.6 4.6L22 34l-4.4 1.6L16 40l-1.6-4.4L10 34l4.4-1.4L16 28z"
+                fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" opacity=".85"/>
+        </svg>
+
+        
+        <svg *ngIf="ornament === 'clock'" class="ornament__icon" viewBox="0 0 64 64">
+          <circle cx="32" cy="32" r="18" fill="none" stroke="currentColor" stroke-width="2.2"/>
+          <path d="M32 20v12l8 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M32 10v4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" opacity=".85"/>
+          <path d="M24 12c2-2 5-3 8-3s6 1 8 3" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" opacity=".65"/>
+          <path d="M46 18l1.2 3.4L50 22.4l-2.8 1L46 26l-1.2-2.6L42 22.4l2.8-.9L46 18z"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" opacity=".75"/>
+
+          <path d="M18 18l1.1 3.2L22 22.1l-2.9 1L18 26l-1.1-2.6L14 22.1l2.9-.9L18 18z"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" opacity=".55"/>
+        </svg>
+
+        <div class="ornament__rule"></div>
+      </div>
+
+      <h2 class="event__title script">{{ title }}</h2>
+    </div>
+
+    <p class="event__meta">
+      <span class="meta__date">{{ dateText }}</span>
+      <span class="dot">•</span>
+      <span class="meta__time">{{ timeText }}</span>
+    </p>
+  </header>
+
+  <div class="event__grid">
+    <div class="event__line">
+      <span class="label">Lugar</span>
+      <span class="value">{{ place }}</span>
+    </div>
+
+    <div class="event__line">
+      <span class="label">Dirección</span>
+      <span class="value">{{ address }}</span>
+    </div>
+
+    <div class="event__actions">
+      <a class="link" [href]="mapsUrl" target="_blank" rel="noopener">
+        Ver ubicación <span class="arrow">→</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="rule" aria-hidden="true"></div>
+</section>

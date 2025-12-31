@@ -1,0 +1,54 @@
+<section class="gifts" id="gifts" #reveal>
+  <header class="gifts__header">
+    <div class="ornament" aria-hidden="true">
+      <svg class="ornament__icon" viewBox="0 0 64 64">
+        <path
+          d="M32 12l2.2 6.8L41 21l-6.8 2.4L32 30l-2.2-6.6L23 21l6.8-2.2L32 12z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.2"
+          stroke-linejoin="round"
+          opacity=".95"
+        />
+        <path
+          d="M48 28l1.2 3.4L52 32.4l-2.8 1L48 36l-1.2-2.6L44 32.4l2.8-.9L48 28z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.2"
+          stroke-linejoin="round"
+          opacity=".55"
+        />
+      </svg>
+      <div class="ornament__rule"></div>
+    </div>
+
+    <h2 class="title script">Mesa de regalos</h2>
+    <p class="subtitle">Si deseas acompañarnos con un detalle</p>
+  </header>
+
+  <div class="panel">
+    <p class="text">
+      Tu presencia es lo más importante. <br />
+      Si quieres regalarnos algo, puedes encontrar nuestra lista aquí:
+    </p>
+
+    <div class="actions">
+      <a class="btn btn--primary" [href]="liverpoolUrl" target="_blank" rel="noopener">
+        Ver en Liverpool <span class="arrow">→</span>
+      </a>
+
+      <button class="btn btn--ghost" type="button" (click)="copyLink()">
+        Copiar enlace
+      </button>
+    </div>
+
+    <p class="small">
+      <span class="label">Liga:</span>
+      <span class="mono">{{ liverpoolUrl }}</span>
+    </p>
+
+    <p class="toast" *ngIf="copied">Copiado ✨</p>
+  </div>
+
+  <div class="rule" aria-hidden="true"></div>
+</section>

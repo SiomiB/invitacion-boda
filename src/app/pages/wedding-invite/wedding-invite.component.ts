@@ -51,7 +51,7 @@ export class WeddingInviteComponent implements AfterViewInit, OnDestroy {
       dateText: '14 de febrero 2026',
       place: 'Casa de la familia López Luna',
       address: 'Calle Francisco Márquez s/n, barrio San Juan, Coyotepec',
-      mapsUrl: 'https://maps.app.goo.gl/CpxtoGxMWazCR6bN6'
+      mapsUrl: 'https://maps.app.goo.gl/eu4RG6b4BtTgS2eC9'
     },
     {
       title: 'Recepción y Fiesta',

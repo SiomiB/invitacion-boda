@@ -49,17 +49,17 @@ export class WeddingInviteComponent implements AfterViewInit, OnDestroy {
       title: 'Ceremonia Civil',
       time: '18:00 hrs',
       dateText: '14 de febrero 2026',
-      place: 'Casa de la familia López Luna',
-      address: 'Calle Francisco Márquez s/n, barrio San Juan, Coyotepec',
-      mapsUrl: 'https://maps.app.goo.gl/eu4RG6b4BtTgS2eC9'
+      place: 'Jardín Las Carmelitas',
+      address: '376 Lerdo de Tejada Ote.Coyotepec, Estado de México',
+      mapsUrl: 'https://maps.app.goo.gl/4wyGtR5vsCPAPVqv7'
     },
     {
       title: 'Recepción y Fiesta',
       time: 'Sigue a la ceremonia religiosa',
       dateText: '14 de febrero 2026',
-      place: 'Casa de la familia López Luna',
-      address: 'Calle Francisco Márquez s/n, barrio San Juan, Coyotepec',
-      mapsUrl: 'https://maps.google.com/?q=Calle%20Francisco%20M%C3%A1rquez%20Coyotepec'
+      place: 'Jardín Las Carmelitas',
+      address: '376 Lerdo de Tejada Ote.Coyotepec, Estado de México',
+      mapsUrl: 'https://maps.app.goo.gl/4wyGtR5vsCPAPVqv7'
     }
   ];
 

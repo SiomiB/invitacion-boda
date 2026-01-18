@@ -45,14 +45,7 @@ export class WeddingInviteComponent implements AfterViewInit, OnDestroy {
       address: 'Pl. de La Constitución 8, La Cabecera, 54660 Coyotepec, Méx',
       mapsUrl: 'https://maps.google.com/?q=Pl.%20de%20La%20Constituci%C3%B3n%208%20Coyotepec%20M%C3%A9x'
     },
-    {
-      title: 'Ceremonia Civil',
-      time: '18:00 hrs',
-      dateText: '14 de febrero 2026',
-      place: 'Jardín Las Carmelitas',
-      address: '376 Lerdo de Tejada Ote.Coyotepec, Estado de México',
-      mapsUrl: 'https://maps.app.goo.gl/4wyGtR5vsCPAPVqv7'
-    },
+   
     {
       title: 'Recepción y Fiesta',
       time: 'Sigue a la ceremonia religiosa',

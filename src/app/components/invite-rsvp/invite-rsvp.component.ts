@@ -15,8 +15,8 @@ export class InviteRsvpComponent implements AfterViewInit, OnDestroy {
   @Input() bride = '';
   @Input() groom = '';
 
-  whatsappPhone = '527731214004';
-  //whatsappPhone = '527731550307';
+  whatsappPhone = '525614857757';
+  //whatsappPhone = '527731214004';
   
 
   @ViewChild('reveal') revealRef!: ElementRef<HTMLElement>;
